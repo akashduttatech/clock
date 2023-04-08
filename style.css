@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.clock {
+    background-color: rgb(58, 1, 138);
+    height: 20em;
+    width: 20em;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    border-radius: 50%;
+    box-shadow: 5px 10px 5px #888888;
+}
+
+.minute {
+    height: 9em;
+    width: 0.5em;
+    background-color: rgb(224, 183, 0);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 20px auto;
+    border-radius: 50px;
+    animation: rotateNeedle 10s infinite;
+    transform-origin: bottom center;
+    animation-timing-function: linear;
+}
+
+.hour {
+    height: 7em;
+    width: 0.5em;
+    background-color: rgb(224, 4, 0);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 50px auto;
+    border-radius: 50px;
+    animation: rotateNeedle 30s infinite;
+    transform-origin: bottom center;
+    animation-timing-function: linear;
+}
+
+.pointer {
+    background-color: rgb(0, 0, 0);
+    height: 2em;
+    width: 2em;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    border-radius: 50%;
+}
+
+@keyframes rotateNeedle {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+  }
